@@ -62,8 +62,15 @@ git remote add origin ssh://user@host/username/project
 Отправить все изменнеия в удаленный репозиторий:
 
 ```bash
-git push
+git push -u origin master
 ```
+
+или
+
+```bash
+git push -u origin main
+```
+
 
 
 
