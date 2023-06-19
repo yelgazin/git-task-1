@@ -76,5 +76,24 @@ git push -u origin main
 HEAD указывает на самый последний коммит.  
 Его можно использовать как псевдоним в командах.
 
+## Жизненный цикл файлов
+
+Все файла находятся в одном их состоянии:
+
+- tracked
+- untracked
+
+Файлы в состоянии **tracked** могут находится также в следующих в состояниях:
+
+- modified
+- staged ("корзинка" для коммита)
+
+```mermaid
+graph LR;
+  untracked -- "git add" --> staged;
+  staged    -- "git commit -m 'Информация'"     --> tracked/comitted;
+  modified  -- "git add" --> staged;
+``` 
+
 
 
